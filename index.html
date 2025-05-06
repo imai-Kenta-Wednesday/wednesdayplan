@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wednesday plan: 君との未来</title>
   <style>
-  body {
+    body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
@@ -61,6 +61,25 @@
   ul {
     padding-left: 1.2em;
   }
+    
+.button {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  color: white;
+  background: linear-gradient(90deg, #00bfff, #1e90ff);
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00bfff, 0 0 20px #1e90ff;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  box-shadow: 0 0 20px #00ffff, 0 0 30px #00bfff;
+  transform: scale(1.05);
+}
 </style>
 </head>
 <body>
@@ -91,8 +110,8 @@
     どうか、君の「小さな希望」も教えてください。</p>
 
     <div class="cta">
-      <a href="future.html">未来への投稿をする</a>
-      <a href="#">みんなの投稿を見る</a>
+      <a href="future.html"class="button">未来への投稿をする</a>
+      <a href="#"class="button">みんなの投稿を見る</a>
     </div>
      <a href="about.html">自己紹介</a>
   </main>
