@@ -41,6 +41,34 @@
         <li>「だれかの笑顔を見られた」</li>
       </ul>
     </section>
+    <section>
+  <h2>あなたの希望を投稿してください</h2>
+  <form id="hopeForm">
+    <textarea id="hopeInput" rows="4" cols="50" placeholder="ここにあなたの希望を書いてください"></textarea><br>
+    <button type="submit">投稿</button>
+  </form>
+
+  <h3>みんなの投稿</h3>
+  <ul id="hopeList">
+    <li>「テストで10点だった子が30点取った」</li>
+    <li>「朝、ちゃんと起きられた」</li>
+    <li>「だれかの笑顔を見られた」</li>
+  </ul>
+</section>
+
+<script>
+  document.getElementById('hopeForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const input = document.getElementById('hopeInput');
+    const text = input.value.trim();
+    if (text) {
+      const li = document.createElement('li');
+      li.textContent = `「${text}」`;
+      document.getElementById('hopeList').appendChild(li);
+      input.value = '';
+    }
+  });
+</script>
   </main>
 
   <footer>
