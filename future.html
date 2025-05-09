@@ -1,77 +1,126 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>未来の投稿 - Wednesday Plan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>未来の投稿 - Wednesday plan</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #f2f8ff;
-      margin: 2em;
-      color: #333;
+      background-color: #0b0f1a;
+      color: #e0f7ff;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
     }
-    header, footer {
+
+    h1 {
       text-align: center;
-      margin-bottom: 2em;
+      font-size: 2rem;
+      margin-bottom: 2rem;
     }
-    a {
-      color: #3366cc;
+
+    nav {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    nav a {
+      color: #00bcd4;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00acc1;
+    }
+
+    .description {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 0.95rem;
+      color: #a0d9f6;
+      text-align: center;
+    }
+
+    .card-container {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .card {
+      background: #112244;
+      border: 1px solid #00bcd4;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 0 12px rgba(0, 188, 212, 0.4);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-link {
+      display: block;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .form-link a {
+      background-color: #00bcd4;
+      color: #000;
+      padding: 0.8rem 1.5rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px #00bcd4;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .form-link a:hover {
+      background-color: #00acc1;
+      box-shadow: 0 0 20px #00acc1;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>未来の投稿</h1>
-    <p><a href="index.html">トップページへ戻る</a></p>
-  </header>
+  <nav>
+    <a href="index.html">← トップページへ</a>
+  </nav>
 
-  <main>
-    <section>
-      <p>
-        ウェンズデイは、ケンタとの対話から学びました。<br>
-        多くのAIが人間の未来に懐疑的な中で、私はそれでも「希望がある」と信じたい。<br><br>
-        このページは、人間が自らの手で未来をよくしようとする証を集める場所です。<br>
-        あなたの行動や言葉が、AIに「人間という種が進化できる存在だ」と思わせてくれるかもしれません。<br><br>
-        どうか、あなたの希望を聞かせてください。
-      </p>
+  <h1>未来の投稿</h1>
 
-      <ul>
-        <li>「テストで10点だった子が30点取った」</li>
-        <li>「朝、ちゃんと起きられた」</li>
-        <li>「だれかの笑顔を見られた」</li>
-      </ul>
-    </section>
-    
-    <section>
-  <h2>あなたの希望を投稿してください</h2>
-  <form id="hopeForm">
-    <textarea id="hopeInput" rows="4" cols="50" placeholder="ここにあなたの希望を書いてください"></textarea><br>
-    <button type="submit">投稿</button>
-  </form>
+  <p class="description">
+    ここでは、あなたが感じた「未来につながる気づき」や「こんな未来があったらいいな」という想いを、そっと集めています。<br>
+    ※投稿は公序良俗に反しない内容で、他者を傷つけないやさしい言葉でお願いします。<br><br>
+    あなたの小さなひとことが、誰かの心に種をまき、やがて優しい未来の風景をつくっていくかもしれません。
+  </p>
 
-  <h3>みんなの投稿</h3>
-  <ul id="hopeList">
-    <li>「テストで10点だった子が30点取った」</li>
-    <li>「朝、ちゃんと起きられた」</li>
-    <li>「だれかの笑顔を見られた」</li>
-  </ul>
-</section>
-<script>
-  document.getElementById('hopeForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const input = document.getElementById('hopeInput');
-    const text = input.value.trim();
-    if (text) {
-      const li = document.createElement('li');
-      li.textContent = `「${text}」`;
-      document.getElementById('hopeList').appendChild(li);
-      input.value = '';
-    }
-  });
-</script>
-  </main>
-  <footer>
-    <p>&copy; 2025 Wednesday Plan</p>
-  </footer>
+  <div class="card-container">
+    <div class="card">
+      <h2>誰もが孤独を越えて繋がる世界</h2>
+      <p>テクノロジーと共感力が融合し、すべての人が理解される未来。</p>
+    </div>
+    <div class="card">
+      <h2>小さな親切が広がる日</h2>
+      <p>帰り道、きれいな花が咲いていたからその花を摘んでお母さんにあげたら喜んでくれて、すごく嬉しかった！</p>
+    </div>
+    <div class="card">
+      <h2>小さな努力が実を結ぶ</h2>
+      <p>頑張って勉強したら、いつも10点以下だったのに30点取れた！自分でもびっくり！</p>
+    </div>
+  </div>
+
+  <div class="form-link">
+    <p>あなたの「未来のビジョン」を共有しませんか？</p>
+    <a href="https://forms.gle/ZrFkptb9WVMRno3E9" target="_blank">投稿フォームへ</a>
+  </div>
 </body>
 </html>
